@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    --bkgColor: #1F2937;
+    --container2-4Color: #fdfdfd;
+    --container3Color: #E5E7EB;
+
+    --headerSize: 60px;
+
+    box-sizing: border-box;
+}
+
+/* ----- TAG RULES ---- */
+
+body {
+    background: var(--bkgColor);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----- CONTAINER RULES ---- */
+
+.container {
+    height: 480px;
+    padding: 0px 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container:nth-child(2) {
+    height: calc(480px - var(--headerSize));
+}
+
+.container:nth-child(3), .container:nth-child(5) {
+    background-color: var(--container2-4Color);
+}
+
+.container:nth-child(4) {
+    background-color: var(--container3Color);
+}
+
+.header {
+    padding: 0px 220px;
+}
+
+/* ----- STYLES RULES ---- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: var(--headerSize);
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+
+    gap: 16px;
+}
+
+.header .link, .hero-secondary {
+    font-size: 18px;
+    color: #c7c3c3;
+}
+
+.header .logo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-area {
+    width: 450px;
+}
+
+.hero-main {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.hero-secondary ~ button {
+    color: white;
+    background-color: #3882F6;
+
+    margin-top: 16px;
+
+    font-size: 16px;
+    padding: 8px 38px;
+    border: none;
+    border-radius: 8px;
+}
+
+.boxInfo-area {
+    flex-direction: column;
+}
+
+.boxInfo-area > p {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+
+    gap: 38px;
+}
+
+.boxInfo {
+    width: 180px;
+    text-align: center;
+}
+
+.boxInfo > img {
+    width: 160px;
+    height: 160px;
+
+    border: 4px solid #3882F6;
+    border-radius: 14px;
+
+    margin-bottom: 8px;
+}
+
+.boxInfo p {
+    font-size: 19px;
+}
+
+/*
+ .link {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-area {
+    width: 40%;
+}
+
+.hero-main {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F9FAF8;
+} */
