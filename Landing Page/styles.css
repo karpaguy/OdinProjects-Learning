@@ -8,8 +8,8 @@
     font-family: 'Roboto', sans-serif;
 
     --bkgColor: #1F2937;
-    --container2-4Color: #fdfdfd;
-    --container3Color: #E5E7EB;
+    --container3-5Color: #fdfdfd;
+    --container4Color: #E5E7EB;
 
     --headerSize: 60px;
 
@@ -46,11 +46,12 @@ a {
 }
 
 .container:nth-child(3), .container:nth-child(5) {
-    background-color: var(--container2-4Color);
+    background-color: var(--container3-5Color);
 }
 
 .container:nth-child(4) {
-    background-color: var(--container3Color);
+    background-color: var(--container4Color);
+    padding: 0px 345px;
 }
 
 .header {
@@ -113,6 +114,7 @@ a {
 
 .boxInfo-area {
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .boxInfo-area > p {
@@ -147,23 +149,26 @@ a {
     font-size: 19px;
 }
 
-/*
- .link {
+.inspirationQuote-area {
+    flex-direction: column;
+}
+
+.quote {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.quoter {
+    align-self: flex-end;
+    padding-right: 50px;
+
     font-size: 18px;
-    color: #E5E7EB;
+    font-weight: 800;
 }
 
-.hero-content {
-    display: flex;
-    justify-content: space-between;
+.cta {
+    
 }
 
-.text-area {
-    width: 40%;
-}
-
-.hero-main {
-    font-size: 48px;
-    font-weight: bolder;
-    color: #F9FAF8;
-} */
+.textCta {}
