@@ -171,4 +171,7 @@ a {
     
 }
 
-.textCta {}
+.textCta {
+    background-color: #3882F6;
+    padding: 120px;
+}
