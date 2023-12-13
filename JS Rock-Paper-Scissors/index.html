@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper and Scissors</title>
-
-    <script src="./script.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="content">
+        <div class="title-area">
+            <h1>ROCK! PAPER! SCISSORS!</h1>
+            <p>CAN YOU BEAT THE MACHINE?</p>
+        </div>
+        
+        <div class="option-selection">
+            <p>CHOOSE YOUR OPTION!</p>
+            <button class="btn" value="Rock">
+                <p>✊</p>
+                <p>ROCK</p>
+            </button>
+            <button class="btn" value="Paper">
+                <p>✋</p>
+                <p>PAPER</p>
+            </button>
+            <button class="btn" value="Scissors">
+                <p>✌️</p>
+                <p>SCISSORS</p>
+            </button>
+        </div>
+        
+        <div class="display-area">
+            <div class="resultDisplay">...</div>
+            <div class="score">
+                <div class="playerScoreDisplay">Player - </div> 
+                <div class="machineScoreDisplay">Machine - </div>
+            </div>
+        </div>
+    </div>
+<script src="./script.js"></script>
 </body>
 </html>
