@@ -1,7 +1,8 @@
 const container = document.querySelector('.container');
 
 function changeColor() {
-    this.classList.toggle("gridUnitBlack");
+    // this.classList.toggle("gridUnitBlack");
+    this.style.backgroundColor = 'black';
 }
 
 function createGrid(num) {
@@ -9,7 +10,7 @@ function createGrid(num) {
         const div = document.createElement('div');
         div.classList.add("gridUnit");
 
-        div.addEventListener("click", changeColor);
+        div.addEventListener("mouseover", changeColor);
 
         console.log("grid!");
         container.appendChild(div);
