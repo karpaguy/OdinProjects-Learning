@@ -1,4 +1,4 @@
-function changeColor() {
+function changeColor(e) {
     this.classList.toggle("gridUnitBlack");
     // this.style.backgroundColor = 'black';
 }
@@ -24,14 +24,17 @@ function createGrid(num) {
 }
 
 const container = document.querySelector('.container');
-const gridChangeBtn = document.querySelector('.gridChangeBtn')
+const gridChangeBtn = document.querySelector('.gridChangeBtn');
 
 gridChangeBtn.addEventListener('click', () => {
     const userGridValue = prompt('How many squares do you want? (Max 100)');
-    while (container.firstChild) {
-        container.removeChild(container.lastChild)
+
+    if (userGridValue <= 100 && userGridValue > 0) {
+        while (container.firstChild) {
+            container.removeChild(container.lastChild)
+        }
+        createGrid(userGridValue);
     }
-    createGrid(userGridValue);
 });
 
 createGrid(4);
