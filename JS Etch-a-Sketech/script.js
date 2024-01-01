@@ -23,7 +23,7 @@ function createGrid(num) {
     }
 }
 
-const container = document.querySelector('.container');
+const container = document.querySelector('.gridContainer');
 const gridChangeBtn = document.querySelector('.gridChangeBtn');
 
 gridChangeBtn.addEventListener('click', () => {
