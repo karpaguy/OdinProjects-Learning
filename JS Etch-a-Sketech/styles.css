@@ -41,12 +41,11 @@ body {
 
     background-color: white;
 }
-
 .gridUnitBlack {
     background-color: black;
 }
 
-.gridChangeBtn {
+.gridChangeBtn, .colorOptions button  {
     width: 200px;
     padding: 10px;
 }
