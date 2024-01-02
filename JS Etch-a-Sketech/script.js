@@ -4,7 +4,11 @@ function changeColorToBlack() {
 }
 
 function changeColorToRainbow() {
-    this.style.backgroundColor = ''
+    let rainbowColors = ['#e81416', '#ffa500', '#faeb36', '#79c314', '#487de7', '#4b369d', '#70369d'];
+
+    let randowColor = Math.floor(Math.random() * 7)
+    console.log(randowColor);
+    this.style.backgroundColor = rainbowColors[randowColor]
 }
 
 // The penMode is a prototype to choose the color of background.
@@ -35,7 +39,7 @@ function createGrid(num) {
 
         div.style.width = widhtPerSquare + "px";
 
-        div.addEventListener("mouseover", paintSquare);
+        div.addEventListener("mouseover", changeColorToRainbow);
 
         console.log("grid!");
         container.appendChild(div);
