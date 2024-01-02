@@ -1,14 +1,33 @@
-function changeColor(e) {
+function changeColorToBlack() {
     this.classList.toggle("gridUnitBlack");
     // this.style.backgroundColor = 'black';
 }
+
+function changeColorToRainbow() {
+    this.style.backgroundColor = ''
+}
+
+// The penMode is a prototype to choose the color of background.
+// Kinda complicated, but it helps to add a new pen mode easliy.
+
+// var penMode = 'black';
+// function paintSquare(e) {
+//     console.log('WA');
+
+//     switch (penMode) {
+//         case 'black':
+//             changeColorToBlack();
+//         case 'rainbow':
+//             changeColorToRainbow();
+//     };
+// }
 
 function createGrid(num) {
     // 512 comes from the container size. Can be changed to a variable if desired.
     let widhtPerSquare = 512 / num; 
     num = num * num;
 
-    console.log(widhtPerSquare)
+    console.log(widhtPerSquare);
 
     for (let i = 0; i < num; i++) {
         const div = document.createElement('div');
@@ -16,7 +35,7 @@ function createGrid(num) {
 
         div.style.width = widhtPerSquare + "px";
 
-        div.addEventListener("mouseover", changeColor);
+        div.addEventListener("mouseover", paintSquare);
 
         console.log("grid!");
         container.appendChild(div);
