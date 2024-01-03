@@ -40,13 +40,13 @@ body {
     flex-grow: 1;
 
     background-color: white;
+    transition: 800ms;
 }
-
 .gridUnitBlack {
     background-color: black;
 }
 
-.gridChangeBtn {
+.gridChangeBtn, .colorOptions button  {
     width: 200px;
     padding: 10px;
 }
