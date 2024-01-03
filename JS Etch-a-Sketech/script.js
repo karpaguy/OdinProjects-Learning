@@ -7,6 +7,9 @@ blackPenBtn.addEventListener('click', () => penMode = 'black');
 const rainbowPenBtn = document.querySelector('.rainbowPen');
 rainbowPenBtn.addEventListener('click', () => penMode = 'rainbow');
 
+const eraserBtn = document.querySelector('.eraser');
+eraserBtn.addEventListener('click', () => penMode = 'eraser');
+
 function changeColorToBlack(item) {
     item.style.backgroundColor = 'black';
 }
@@ -16,16 +19,21 @@ function changeColorToRainbow(item) {
     let randonColor = Math.floor(Math.random() * 7)
     item.style.backgroundColor = rainbowColors[randonColor]
 }
+function changeColorToWhite(item) {
+    item.style.backgroundColor = 'white';
+}
 
 var penMode = 'black';
 function paintSquare(e) {
     switch (penMode) {
         case 'black':
             changeColorToBlack(this);
-            break
+            break;
         case 'rainbow':
             changeColorToRainbow(this);
-            break
+            break;
+        case 'eraser':
+            changeColorToWhite(this);
     };
 }
 
