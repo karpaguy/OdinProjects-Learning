@@ -1,6 +1,8 @@
 const container = document.querySelector('.gridContainer');
 const gridChangeBtn = document.querySelector('.gridChangeBtn');
 
+// Adding Pens Section -•
+// Add the changeColorFunctions and Pens here. Remeber to add a case for the new pen in the paintSquare function.
 const blackPenBtn = document.querySelector('.blackPen');
 blackPenBtn.addEventListener('click', () => penMode = 'black');
 
@@ -37,12 +39,14 @@ function paintSquare(e) {
     };
 }
 
-function createGrid(num) {
-    // 512 comes from the container size. Can be changed to a variable if desired.
-    let widhtPerSquare = 512 / num; 
-    num = num * num;
+// Adding Pens Section -•
 
-    for (let i = 0; i < num; i++) {
+function createGrid(sizeDesired) {
+    // 512 comes from the container size. Can be changed to a variable if desired.
+    let widhtPerSquare = 512 / sizeDesired; 
+    sizeDesiredArea = sizeDesired ** 2;
+
+    for (let i = 0; i < sizeDesiredArea; i++) {
         const div = document.createElement('div');
         div.classList.add("gridUnit");
         div.style.width = widhtPerSquare + "px";
@@ -55,14 +59,12 @@ function createGrid(num) {
 gridChangeBtn.addEventListener('click', () => {
     const userGridValue = prompt('How many squares do you want? (Max 100)');
 
-    if (userGridValue > 100 || userGridValue < 0) {
-        return "ERROR!";
-    }
-    
+    if (userGridValue > 100 || userGridValue < 0) { return "ERROR!" };
     while (container.firstChild) {
         container.removeChild(container.lastChild)
     }
     createGrid(userGridValue);
 });
 
+// Default grid is 4x4.
 createGrid(4);
